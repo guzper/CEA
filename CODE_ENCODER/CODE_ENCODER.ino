@@ -1,10 +1,10 @@
 
 int A = 2; 			//variable A a pin digital 2 (DT en modulo)
-int B = 4;  			//variable B a pin digital 4 (CLK en modulo)
+int B = 3;  			//variable B a pin digital 4 (CLK en modulo)
 
-int ANTERIOR = 25;		// almacena valor anterior de la variable POSICION
+int ANTERIOR = 0;		// almacena valor anterior de la variable POSICION
 
-volatile int POSICION = 25;	// variable POSICION con valor inicial de 50 y definida
+volatile int POSICION = 0;	// variable POSICION con valor inicial de 50 y definida
 				// como global al ser usada en loop e ISR (encoder)
 void setup() {
   pinMode(A, INPUT);		// A como entrada
@@ -12,7 +12,7 @@ void setup() {
 
   Serial.begin(9600);		// incializacion de comunicacion serie a 9600 bps
 
-  attachInterrupt(digitalPinToInterrupt(A), encoder, LOW);// interrupcion sobre pin A con
+  attachInterrupt(digitalPinToInterrupt(A), encoder, HIGH);// interrupcion sobre pin A con
 							  // funcion ISR encoder y modo LOW
   Serial.println("Listo");	// imprime en monitor serial Listo
 }
