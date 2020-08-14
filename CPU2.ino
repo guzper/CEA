@@ -11,13 +11,16 @@ int lastState;
 int direction = 6;
 int throttle = 7;
 
+void a0();
+void a1();
+
 void setup (){
 
     Serial.begin(9600);
     Serial.print("Welcome to CEA Car");
 
     for(int a = 0; a < 15; a++){
-        Serial.print("*")
+        Serial.print("*");
     }
     Serial.println();
     
@@ -65,7 +68,7 @@ void loop (){
   } else{
     counter++;
   }
-  }
+}
 
 
     /*
