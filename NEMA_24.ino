@@ -18,5 +18,13 @@ void loop (){
         delay(1);
         digitalWrite(PUL,LOW);
         delay(1);
+
+          delay (100);
+
+          for (int i = 200; i<200; i--);
+          digitalWrite(PUL, LOW);
+          delay(1);
+          digitalWrite(PUL,HIGH);
+          delay(100);
     }
 }
