@@ -30,7 +30,7 @@ void Encoder(){
    while(true){
        Serial.print("The encoder value is: ");
        Serial.print(counter);
-       c
+      
        Serial.println();
        delay(1000);
    }
@@ -51,7 +51,7 @@ void setup (){
     Serial.print("Welcome to CEA Car");
 
     for(int a = 0; a < 15; a++){
-        Serial.print("*")
+        Serial.print("*");
     }
     Serial.println();
     
