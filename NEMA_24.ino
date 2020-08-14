@@ -1,3 +1,4 @@
+// Step motor pins.
 int DIR = 8;
 int PUL = 9;
 
@@ -6,6 +7,7 @@ void setup (){
     pinMode (DIR, OUTPUT);
     pinMode (PUL, OUTPUT);
 
+    // Set up and runnning the stepper motor module
     digitalWrite (DIR, HIGH);
 }
 
